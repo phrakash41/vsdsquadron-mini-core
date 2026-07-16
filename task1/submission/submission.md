@@ -2,23 +2,24 @@
 
 ## What is a firmware library?
 
-Firmware library : Collection of functions and definitions that lets the application code control hardware.
+A firmware library is a collection of pre-written functions that wrap up low-level, repetitive hardware operations into simple, reusable function calls.
 
-## Why are APIs important?
+## Why APIs are important in embedded systems?
 
-Because APIs are the fundamental contract between the application and a library. This separation makes code easier to read, test, reuse and port.
+APIs let embedded code say what it wants to do (like "turn on this pin") without needing to know how the hardware actually does it — making code easier, safer, and reusable across different chips.
 
-## What I understood from this task
+## What was understood from the lab code?
 
-- Header and source separation allows multiple applications to reuse the same driver and allows the driver implementation to evolve independently.
-- `gpio.h` is the public interface that defines the GPIO directions and declares the functions that application code may call.
-- `gpio.c` is the implementation which simulates hardware activity with console output and returns a fixed input value.
-- `main.c` is the main application which initializes an LED pin as an output and a button pin as an input, writes the LED, reads the button, and turns the LED off without depending on the library's internal implementation.
+The lab walked through a simple firmware library pattern: interface (.h) → implementation (.c) → application (main.c). 
 
-## Build and run evidence
+gpio.h — declares the GPIO API (function names and constants) without saying how they work.  
+gpio.c — implements those functions, simulating hardware behavior with printf instead of real registers.  
+main.c — the application that uses the API to init pins, write the LED, and read the button, without knowing any hardware details.
+
+## Build and run screenshot
 
 ![Successful compilation](task1_demo_output.jpg)
 
 ## Repository
 
-[GitHub repository](https://github.com/phrakash41/vsdsquadron-mini-core/blob/main/task1/submission)
+GitHub repository link - https://github.com/phrakash41/vsdsquadron-mini-core/blob/main/task1/submission
