@@ -21,4 +21,4 @@ Because APIs are the fundamental contract between the application and a library.
 
 ## Repository
 
-[GitHub repository](https://github.com/nsrknth/vsdsquadron-mini-core)
+[GitHub repository](https://github.com/phrakash41/vsdsquadron-mini-core/blob/main/task1/submission)
